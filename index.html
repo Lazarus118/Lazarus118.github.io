@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Aulavara | Design & Development</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage very simple demo." />
+	<meta name="keywords"  content="fullpage,jquery,demo,simple" />
+	<meta name="Resource-type" content="Document" />
+
+	
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/elastic_framework.css" />
+	<link rel="stylesheet" type="text/css" href="css/elastic_grid.min.css" />
+
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+		
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+	
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				autoScrolling: false,
+				slidesColor: ['#ffffff', '#ffffff']
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+
+<div id="fullpage">
+	<div class="header">
+		<img src="img/logo.png" width="5%" height="5%" />
+		<h3>Aulavara // Design & Development</h3>
+	</div>
+	
+	<div class="section active" id="section0">
+		<div class="wrapper">
+			<div class="navbar">
+					<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="https://aulavara.wordpress.com/">Blog</a></li>
+					<li><a href="#" class="modal" data-content="about.html">About</a></li>
+					<li><a href="#" class="modal" data-content="">Book shelf</a></li>
+					</ul>
+			</div>
+			<div class="description">
+				<p>// Welcome to my portfolio site, looking to collaborate or start a new project, drop me a line below //</p>
+			</div>	
+			<div id="elastic_grid_demo" style="display:block;position:relative;top:20%; overflow-y:scroll;"></div>	
+				<SCRIPT SRC="js/modernizr.custom.js"></SCRIPT>
+				<SCRIPT SRC="js/classie.js"></SCRIPT>
+				<SCRIPT SRC="js/elastic_grid.encode.js" TYPE="text/javascript"></SCRIPT>
+			</div>
+	</div>
+	
+	<div class="section" id="section1">
+		<div class="footer">
+			<br /><br />
+			<h4>Social presence</h4><br /><br />
+			<ul>
+			<li><a href="https://www.facebook.com/austin.lazarus"><img src="img/social/fb.png" width="30px" height="30px"/></a></li>
+			<li><a href="https://twitter.com/aulavara"><img src="img/social/twitter.png" width="30px" height="30px"/></a></li>
+			<li><a href="https://instagram.com/austin_lazarus/"><img src="img/social/instagram.png" width="30px" height="30px"/></a></li>
+			<li><a href="https://www.linkedin.com/in/aulavara"><img src="img/social/linkedin.png" width="30px" height="30px"/></a></li>
+			<li><a href="https://vimeo.com/user4143292"><img src="img/social/vimeo.png" width="30px" height="30px"/></a></li>
+			<li><a href="#" class="modal" data-content="more.html"><img src="img/social/a.png" width="30px" height="30px"/></a></li>
+			</ul><br /><br />
+			<hr width="25%"><br /><br />
+			<h4>Drop me a line</h4>
+			<a href="#inmail" class="modal" data-content="{{ url_for('inmail') }}"><button><p>Hi....</p></button></a>
+		</div>
+	</div>
+
+</div>
+
+<SCRIPT TYPE="text/javascript">
+$(function() {
+	$("#elastic_grid_demo").elastic_grid({
+	    'items': [{
+		      'title': 'Web Developement | Optiprecision',
+      'description': 'This project was done for [ optiprecision.com ] and built from a Design I proposed. Everything was built from stratch to suit their particular needs.',
+      'thumbnail': ['img/large/Screenshot.png', 'img/large/logo.png'],
+      'large': ['img/small/Screenshot from 2015.png', ''],
+      'button_list': [{
+        'title': 'Link',
+        'url': 'http://optiprecision.com'
+      }],
+      'tags': ['Web Development']
+	  }]
+	});
+});
+</SCRIPT>
+
+	<script src="js/modal.jquery.js"></script>
+	<script type="text/javascript">
+		$('.modal').modal({
+		'modal': 'modal-window',
+		'close': 'modal-close',
+		'closeText': 'x',
+		'shade': 'modal-shade'
+		});
+	</script>
+
+</body>
+</html>
