@@ -23,7 +23,7 @@ body {
 	position: fixed;
 	width: 100%;
 	top: 0px;
-	z-index: 5000;
+	z-index: 1000;
 	opacity: 0.8;
 	background: #DFDFDF;
 }
@@ -47,8 +47,7 @@ body {
 .profile img{
 	display: block;
 	border-radius: 50%;
-	width: 10%;
-	height: 20%;
+	width: 20%;
 	margin: 0px auto;
 	padding: 3%;
 }
@@ -106,7 +105,7 @@ body {
   margin:0 auto;
   position:relative;
   bottom:0;
-  top:15%
+  top:20%
 }
 
 .description p {
@@ -121,15 +120,26 @@ body {
   position:absolute
 }
 
+/*
+.description h3 {
+	margin: 0px auto;
+	margin-top: 5%;
+	font-family:'Josefin Sans',sans-serif;
+	font-weight: 700;
+	color:#D2D7D3;
+}
+*/
+
 .footer {
-  display:block;
-  border-top:1px solid #1BA39C;
-  z-index:1000;
-  width:100%;
-  height:50%;
-  bottom:0;
-  background:#DFDFDF;
-  position:absolute
+	display: block;
+	border-bottom: 5px solid #1BA39C;
+	z-index: 1000;
+	width: 85%;
+	height: 40%;
+	bottom: -25%;
+	background: none repeat scroll 0% 0% #DFDFDF;
+	position: relative;
+	margin: 0px auto;
 }
 
 .footer h4 {
@@ -145,6 +155,7 @@ body {
 .footer hr {
 	color: #ffffff;
 	border-top: none;
+	margin-left: 5%;
 }
 
 .footer button {
@@ -167,6 +178,22 @@ body {
 	margin-left: 1%;
 }
 
+.footer span {
+	clear: both;
+	float: right;
+	color: #000;
+	font-family:'Josefin Sans',sans-serif;
+	font-weight: 900;
+	margin-right: 10%;
+}
+
+.divider {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    border-left: 1px solid #fff;
+}
+
 .container {
   padding:20px
 }
@@ -176,7 +203,7 @@ body {
   left:50%;
   top:50px;
   width:60%;
-  z-index:5000;
+  z-index:6000;
   padding:30px;
   background-color:#fff;
   border:1px solid #000;

@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<ss:Workbook xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+<ss:Styles><ss:Style ss:ID="1"><ss:Font ss:Bold="1"/></ss:Style></ss:Styles>
+<ss:Worksheet ss:Name="Sqliteman Export">
+<ss:Table>
+<ss:Column ss:Width="100"/>
+<ss:Column ss:Width="100"/>
+<ss:Column ss:Width="100"/>
+<ss:Column ss:Width="100"/>
+<ss:Column ss:Width="100"/>
+<ss:Column ss:Width="100"/>
+<ss:Column ss:Width="100"/>
+<ss:Column ss:Width="100"/>
+<ss:Row ss:StyleID="1">
+<ss:Cell><ss:Data ss:Type="String">id</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">title</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">description</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">button_list_title</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">button_list_url</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">tags</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">file</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">file2</ss:Data></ss:Cell>
+</ss:Row>
+<ss:Row>
+<ss:Cell><ss:Data ss:Type="String">1</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">Mobile Development and Design | Bagit</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">Bagit was partly developed for the DigialJam 3.0 competition in Jamaica of 2014.</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">LINK</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">http://www.facebook.com/bagitapp</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">Mobile Development</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">/static/img/small/222.png</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">/static/img/large/3.png</ss:Data></ss:Cell>
+</ss:Row>
+<ss:Row>
+<ss:Cell><ss:Data ss:Type="String">2</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">Graphic Design and Development | Farm Easy</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">This was done for the AgriHack Talent Competition 2014 hosted by CTA and partners. </ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">NONE</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">N/A</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">Graphic Design</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">/static/img/small/1.jpg</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">/static/img/large/2.jpg</ss:Data></ss:Cell>
+</ss:Row>
+<ss:Row>
+<ss:Cell><ss:Data ss:Type="String">3</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">Website Design and Development | Motigam</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">Website created for the Rotaract Club of Roseau's Professional Committee - 2013</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">LINK</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">http://www.motigam.site44.com</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">Web Development</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">/static/img/small/2.png</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">/static/img/large/g4480.png</ss:Data></ss:Cell>
+</ss:Row>
+<ss:Row>
+<ss:Cell><ss:Data ss:Type="String">4</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">Logo Design | Island Safety Supplies</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">Logo created and designed for Island Safety Supplies</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">NONE</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">N/A</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">Logo Design</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">/static/img/small/g3998.png</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">/static/img/large/g3951.png</ss:Data></ss:Cell>
+</ss:Row>
+<ss:Row>
+<ss:Cell><ss:Data ss:Type="String">5</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">Graphic Design | ExtraDM </ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">Poster and Add design created for extradm.com</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">LINK</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">http://extradm.com/#</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">Graphic Design</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">/static/img/small/g3210.png</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">/static/img/large/g3210.png</ss:Data></ss:Cell>
+</ss:Row>
+<ss:Row>
+<ss:Cell><ss:Data ss:Type="String">6</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">Graphic Design | Interactive programming event poster</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">This poster was made for the Rotaract 2012 Interactive programming event. </ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">NONE</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">N/A</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">Graphic Design</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">/static/img/small/CD_Covers.png</ss:Data></ss:Cell>
+<ss:Cell><ss:Data ss:Type="String">/static/img/large/CD_Covers.png</ss:Data></ss:Cell>
+</ss:Row>
+</ss:Table>
+</ss:Worksheet>
+</ss:Workbook>

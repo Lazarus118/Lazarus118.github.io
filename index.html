@@ -4,12 +4,12 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
 	<title>Aulavara | Design & Development</title>
-	<meta name="author" content="Alvaro Trigo Lopez" />
-	<meta name="description" content="fullPage very simple demo." />
-	<meta name="keywords"  content="fullpage,jquery,demo,simple" />
+	<meta name="author" content="Austin Lazarus" />
+	<meta name="description" content="Portfolio site for Aulavara / Austin Lazarus" />
+	<meta name="keywords"  content="Austin Lazarus,Aulavara,Portfolio" />
 	<meta name="Resource-type" content="Document" />
 
-	
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="css/examples.css" />
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
@@ -51,15 +51,16 @@
 			<div class="navbar">
 					<ul>
 					<li><a href="#">Home</a></li>
-					<li><a href="https://aulavara.wordpress.com/">Blog</a></li>
+					<li><a href="https://aulavara.wordpress.com/" target="_blank">Blog</a></li>
 					<li><a href="#" class="modal" data-content="about.html">About</a></li>
-					<li><a href="#" class="modal" data-content="">Book shelf</a></li>
+					<li><a href="#" class="modal" data-content="">Ideas</a></li>
 					</ul>
 			</div>
 			<div class="description">
-				<p>// Welcome to my portfolio site, looking to collaborate or start a new project, drop me a line below //</p>
+				<!-- <h3>// Hello //</h3> -->
+				<p>Welcome to my portfolio site, looking to collaborate or start a new project, drop me a line below.</p>
 			</div>	
-			<div id="elastic_grid_demo" style="display:block;position:relative;top:20%; overflow-y:scroll;"></div>	
+			<div id="elastic_grid_demo" style="display:block;position:relative;top:20%; overflow-y:scroll;height:80%;"></div>	
 				<SCRIPT SRC="js/modernizr.custom.js"></SCRIPT>
 				<SCRIPT SRC="js/classie.js"></SCRIPT>
 				<SCRIPT SRC="js/elastic_grid.encode.js" TYPE="text/javascript"></SCRIPT>
@@ -71,16 +72,20 @@
 			<br /><br />
 			<h4>Social presence</h4><br /><br />
 			<ul>
-			<li><a href="https://www.facebook.com/austin.lazarus"><img src="img/social/fb.png" width="30px" height="30px"/></a></li>
-			<li><a href="https://twitter.com/aulavara"><img src="img/social/twitter.png" width="30px" height="30px"/></a></li>
-			<li><a href="https://instagram.com/austin_lazarus/"><img src="img/social/instagram.png" width="30px" height="30px"/></a></li>
-			<li><a href="https://www.linkedin.com/in/aulavara"><img src="img/social/linkedin.png" width="30px" height="30px"/></a></li>
-			<li><a href="https://vimeo.com/user4143292"><img src="img/social/vimeo.png" width="30px" height="30px"/></a></li>
+			<li><a href="https://www.facebook.com/austin.lazarus" target="_blank"><img src="img/social/fb.png" width="30px" height="30px"/></a></li>
+			<li><a href="https://twitter.com/aulavara" target="_blank"><img src="img/social/twitter.png" width="30px" height="30px"/></a></li>
+			<li><a href="https://instagram.com/austin_lazarus/" target="_blank"><img src="img/social/instagram.png" width="30px" height="30px"/></a></li>
+			<li><a href="https://www.linkedin.com/in/aulavara" target="_blank"><img src="img/social/linkedin.png" width="30px" height="30px"/></a></li>
+			<li><a href="https://vimeo.com/user4143292" target="_blank"><img src="img/social/vimeo.png" width="30px" height="30px"/></a></li>
 			<li><a href="#" class="modal" data-content="more.html"><img src="img/social/a.png" width="30px" height="30px"/></a></li>
 			</ul><br /><br />
-			<hr width="25%"><br /><br />
+			<hr width="10%"><br /><br />
 			<h4>Drop me a line</h4>
-			<a href="#inmail" class="modal" data-content="{{ url_for('inmail') }}"><button><p>Hi....</p></button></a>
+			<a href="#inmail" class="modal" data-content="{{ url_for('inmail') }}"><button><p>Hi ___ </p></button></a>
+		
+			<div class="divider" style="top:30%;"></div>
+			
+			<span>Austin Lazarus © 2015. All rights reserved.</span>
 		</div>
 	</div>
 
@@ -91,7 +96,7 @@ $(function() {
 	$("#elastic_grid_demo").elastic_grid({
 	    'items': [{
 		      'title': 'Web Developement | Optiprecision',
-      'description': 'This project was done for [ optiprecision.com ] and built from a Design I proposed. Everything was built from stratch to suit their particular needs.',
+      'description': 'This project was done for // optiprecision.com // and built from a Design I proposed.',
       'thumbnail': ['img/large/Screenshot.png', 'img/large/logo.png'],
       'large': ['img/small/Screenshot from 2015.png', ''],
       'button_list': [{
@@ -102,7 +107,7 @@ $(function() {
 	  },
 	  {
 		'title': 'Mobile Development and Design | Bagit',
-      'description': 'Bagit was partly developed for the DigialJam 3.0 competition in Jamaica of 2014.',
+      'description': 'Bagit was partly developed with Ryan Royer for the DigialJam 3.0 competition in Jamaica of 2014.',
       'thumbnail': ['img/small/bagit.png', 'img/large/bagit-icon.png'],
       'large': ['img/large/bagit2.png', ''],
       'button_list': [{
@@ -112,9 +117,86 @@ $(function() {
       'tags': ['Mobile Development']
 	  },
 	  	{
+		'title': 'Graphic Design and Development | Farm Easy',
+      'description': 'This was done for the AgriHack Talent Competition 2014 hosted by CTA and partners. ',
+      'thumbnail': ['img/small/1.jpg', 'img/large/2.jpg'],
+      'large': ['img/small/1.jpg', ''],
+      'button_list': [{
+        'title': 'NONE',
+        'url': 'N/A'
+      }],
+      'tags': ['Graphic Design']
+	  },
+	  	{
+		'title': 'Website Design and Development | Motigam',
+      'description': 'Website created for the Rotaract Club of Roseau"s Professional Committee - 2013',
+      'thumbnail': ['img/small/2.png', 'img/large/g4480.png'],
+      'large': ['img/large/g4480.png', ''],
+      'button_list': [{
+        'title': 'Link',
+        'url': 'http://www.motigam.site44.com'
+      }],
+      'tags': ['Web Development']
+	  },
+	  	{
+		'title': 'Logo Design | Island Safety Supplies',
+      'description': 'Logo created and designed for Island Safety Supplies',
+      'thumbnail': ['img/small/g3998.png', 'img/large/g3951.png'],
+      'large': ['img/large/g3951.png', ''],
+      'button_list': [{
+        'title': 'NONE',
+        'url': 'N/A'
+      }],
+      'tags': ['Logo Design']
+	  },
+	  	{
+		'title': 'Graphic Design | Interactive programming event poster',
+      'description': 'This poster was made for the Rotaract 2012 Interactive programming event. ',
+      'thumbnail': ['img/small/CD_Covers.png', 'img/large/CD_Covers.png'],
+      'large': ['img/large/CD_Covers.png', ''],
+      'button_list': [{
+        'title': 'NONE',
+        'url': 'N/A'
+      }],
+      'tags': ['Graphic Design']
+	  },
+	  	{
+		'title': 'Logo Design | Tropicode Software Solutions',
+      'description': 'Logo design and creation done for TSS official logo and business card',
+      'thumbnail': ['img/small/tropicode.png'],
+      'large': ['img/large/tropicode.png'],
+      'button_list': [{
+        'title': 'NONE',
+        'url': 'N/A'
+      }],
+      'tags': ['Logo Design']
+	  },
+	  	{
+		'title': 'Graphic Design | Optical Services Ltd.',
+      'description': 'Poster designed and created for Optical Services Ltd.',
+      'thumbnail': ['img/small/optiserv.jpg'],
+      'large': ['img/large/optiserv.jpg'],
+      'button_list': [{
+        'title': 'Link',
+        'url': 'https://www.facebook.com/optiserv'
+      }],
+      'tags': ['Graphic Design']
+	  },
+	  	{
 		'title': '',
       'description': '',
-      'thumbnail': ['', ''],
+      'thumbnail': ['img/small/grey2.jpg'],
+      'large': ['', ''],
+      'button_list': [{
+        'title': 'Link',
+        'url': ''
+      }],
+      'tags': ['']
+	  },
+	  	{
+		'title': '',
+      'description': '',
+      'thumbnail': ['img/small/grey2.jpg', ''],
       'large': ['', ''],
       'button_list': [{
         'title': 'Link',
