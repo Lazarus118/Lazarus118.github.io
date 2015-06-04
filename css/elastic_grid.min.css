@@ -42,12 +42,12 @@
   outline: 0;
   display: block;
   position: relative;
-  max-height: 200px;
-  max-width: 200px;
+  max-height: 200px; 
+  /* max-width: 200px; */
 }
 
 .og-pointer {
-  top: auto;
+  top: -24%;
   border: solid transparent;
   content: " ";
   height: 0;
@@ -64,7 +64,7 @@
   position: absolute;
   background: #DFDFDF;
   color: #d6d6d6;
-  top: auto;
+  top: 20%;
   left: 0;
   width: 100%;
   margin-top: 0;
