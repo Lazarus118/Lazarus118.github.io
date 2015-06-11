@@ -281,7 +281,8 @@
 }
 
 .wagwep-container ul#portfolio-filter a {
-	color: #BFBFBF;
+	/* color: #BFBFBF; */
+	color: #000;
 	text-decoration: none;
 	font-size: 10px;
 	font-weight: bold;
