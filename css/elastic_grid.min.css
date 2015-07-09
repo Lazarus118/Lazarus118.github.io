@@ -285,7 +285,7 @@
 	color: #000;
 	text-decoration: none;
 	font-size: 10px;
-	font-weight: bold;
+	/* font-weight: bold; */
 	border: 0px none;
 	background: none repeat scroll 0% 0% #ECF0F1;
 	margin: 0px 5px 5px 0px;
