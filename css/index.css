@@ -161,12 +161,13 @@ body {
 
 .footer button {
 	display: block;
-	float:left;
+	float: left;
 	clear: both;
 	margin-left: 1%;
 	border: none;
 	padding: 10px;
-    width: 24%;
+    	width: 24%;
+    	background: #fff;
 }
 
 .footer button p {
