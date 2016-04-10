@@ -105,7 +105,7 @@ body {
   margin:0 auto;
   position:relative;
   bottom:0;
-  top:40%
+  top:50%;
 }
 
 .description p {
@@ -137,7 +137,7 @@ body {
 	z-index: 1000;
 	width: 85%;
 	height: 40%;
-	bottom: -25%;
+	bottom: -50%;
 	background: none repeat scroll 0% 0% #DFDFDF;
 	position: relative;
 	margin: 0px auto;
