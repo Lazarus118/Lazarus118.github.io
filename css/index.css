@@ -286,3 +286,10 @@ body {
   color:#fff
   font-family:'Josefin Sans',sans-serif;
 }
+
+/******** Nursing Coucil Mockup *********/
+/****************************************/
+.nursing_wrapper {
+  background: url("../img/nursing_council_mockup.png");
+  background-size: cover;
+}
