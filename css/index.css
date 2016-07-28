@@ -16,7 +16,7 @@ TODO: Create background image with opacity
 }
 */
 body {
-  margin:0
+  margin:0;
 }
 
 .header {
@@ -293,3 +293,105 @@ body {
   background: url("../img/nursing_council_mockup.png");
   background-size: cover;
 }
+
+.about {
+    text-decoration: none;
+    right: 0;
+    font-size: 10px;
+    color: #000;
+    top: -5px;
+    position: fixed;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 10px auto;
+}
+.toggleMenu {
+    display:  none;
+    background: #666;
+    padding: 10px 15px;
+    color: #fff;
+}
+.nav_nursing {
+    list-style: none;
+     *zoom: 1;
+     background:#1F3A93;
+}
+.nav_nursing:before,
+.nav_nursing:after {
+    content: " "; 
+    display: table; 
+}
+.nav_nursing:after {
+    clear: both;
+}
+.nav_nursing ul {
+    list-style: none;
+    width: 9em;
+}
+.nav_nursing a {
+    padding: 10px 15px;
+    color:#fff;
+}
+.nav_nursing li {
+    position: relative;
+}
+.nav_nursing > li {
+    float: left;
+    border-top: 1px solid #104336;
+}
+
+.nav_nursing > li > a {
+    display: block;
+}
+.nav_nursing li  ul {
+    position: absolute;
+    left: -9999px;
+}
+.nav_nursing > li.hover > ul {
+    left: 0;
+}
+.nav_nursing li li.hover ul {
+    left: 100%;
+    top: 0;
+}
+.nav_nursing li li a {
+    display: block;
+    background: #1F3A93;
+    position: relative;
+    z-index:100;
+    border-top: 1px solid #175e4c;
+}
+.nav_nursing li li li a {
+    background:#249578;
+    z-index:200;
+    border-top: 1px solid #1d7a62;
+}
+
+@media screen and (max-width: 768px) {
+    .active {
+        display: block;
+    }
+    .nav_nursing > li {
+        float: none;
+    }
+    .nav_nursing > li > .parent {
+        background-position: 95% 50%;
+    }
+    .nav_nursing li li .parent {
+        background-image: url("images/downArrow.png");
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+    }
+    .nav_nursing ul {
+        display: block;
+        width: 100%;
+    }
+   .nav_nursing > li.hover > ul , .nav_nursing li li.hover ul {
+        position: static;
+    }
+
+}
+
