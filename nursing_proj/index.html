@@ -8,18 +8,15 @@
 </head>
 
 <body>
-			<!--
-				<a class="about" href="#about">click here</a>
+<div id="fullpage">
 
-			<div class="modal" id="nav" style="display: none;">
-				<a href="#" class="close">x</a>
-			-->
-
+<div class="section" id="section0">
 	<!-- *************************
 	=> HOME NAVBAR
-	************************** --> 
+	************************** -->
 	<div class="container_menu"><a class="toggleMenu" href="#">Menu</a>
 	<ul class="nav_nursing">
+	<p align="right">767-555-5555</p>			
 	<li class="test"><a href="#">Home</a>
 	</li>
 	<li><a href="#">About Us</a>
@@ -30,7 +27,7 @@
 			<li><a href="#">Organisational Chart</a></li>
 		</ul>
 	</li>
-	<li><a href="#">Announcements</a>
+	<li><a href="#announcements">Announcements</a>
 	</li>
 	<li><a href="#">Documents</a>
 		<ul>
@@ -58,12 +55,6 @@
 	</li>
 		</ul>
 	</div>
-
-
-
-<div id="fullpage">
-
-<div class="section" id="section0">
 	<!-- *************************
 	=> Sub Menu Left
 	************************** --> 
@@ -73,20 +64,17 @@
 		<hr width="50%">					
 		<p align="CENTER">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </p>			
 	</div>			
-
 	<!-- *************************
 	=> Gallary Container 
 	************************** --> 
 	<div class="gallary_container">
 		<ul class="bxslider">
-		  <li><img src="images/pic1.jpg" /></li>
-		  <li><img src="images/pic2.jpg" /></li>
+		  <li><img title="dolor sit amet, consectetur adipiscing elit" src="images/pic1.jpg" /></li>
+		  <li><img title="dolor sit amet, consectetur adipiscing elit" src="images/pic2.jpg" /></li>
 		</ul>
-
 		<h3 align="CENTER">Welcome to the General Nurcing Council for Dominica</h3>
 		<p align="CENTER">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>				
 	</div>
-
 	<!-- *************************
 	=> Sub Menu Right
 	************************** --> 
@@ -94,7 +82,9 @@
 		<h2 align="center">Scholarship Awards</h2>
 		<br />
 		<hr width="50%">	
-		<p align="CENTER">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>		
+		<p align="CENTER">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+		<br />
+		<p align="CENTER">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>				
 	</div>
 </div><!-- //end of section0 -->
 
@@ -102,34 +92,42 @@
 	<div class="section1_nav">
 		<h3 align="right">Registration</h3>
 	</div>
-
 	<!-- *************************
 	=> Sub Menu Left
 	************************** --> 
 	<div class="sub_menu_1">
 		<h2 align="center">Application Requirements</h2>
 		<ul>
-			<li>PDF option 1</li>
-			<li>PDF option 2</li>
-			<li>PDF option 3</li>
-			<li>PDF option 4</li>
-			<li>PDF option 5</li>
+			<a class="pdf_1" href=""><li>PDF option 1</li></a>
+			<a href=""><li>PDF option 2</li></a>
+			<a href=""><li>PDF option 3</li></a>
+			<a href=""><li>PDF option 4</li></a>
+			<a href=""><li>PDF option 5</li></a>
 		</ul>
 	</div>
-
+	<!-- *************************
+	=> PDF MODAL
+	************************** -->
+	<div class="modal" id="pdf_modal" style="display: none;">
+		<a href="#" class="close">x</a>
+		<p align="CENTER">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>				
+	</div>	
 	<!-- *************************
 	=> Typeform Forms canvas
 	************************** --> 
-	<div class="typeform-widget typeform-layout" data-url="https://austin106.typeform.com/to/vawiVe" data-text="Registration Form" style="width:70%;height:700px;"></div>
-<script>
-(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()
-</script>				
+	<div class="typeform-widget typeform-layout" data-url="https://austin106.typeform.com/to/vawiVe" data-text="Registration Form" style="width:70%;height:500px;"></div>
+	<script>
+	(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()
+	</script>				
 </div><!-- //end of section1 -->
 
 <div class="section" id="section2">
-		<p align="CENTER">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-
-		<div id="footer">
+		<h3 align="center">Announcements</h3>
+		<div class="announcement_container">
+			<p align="CENTER">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>			
+		</div>
+		<div class="footer">
+			<p align="center">all rights reserved 2016</p>
 		</div>				
 </div><!-- //end of section2 -->
 
@@ -139,16 +137,18 @@
 
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<!--
 <script src="js/modal.js"></script>
 <script type="text/javascript">
 	jQuery(function($){
+	//**************************************	
 	// bind event handlers to modal triggers
-	$('body').on('click', '.about', function(e){
+	$('body').on('click', '.pdf_1', function(e){
+		alert('clicked');
 	e.preventDefault();
-	$('#nav').modal().open();
+	$('#pdf_modal').modal().open();
 	});
 
+	//***************************
 	// attach modal close handler
 	$('.modal .close').on('click', function(e){
 	e.preventDefault();
@@ -157,7 +157,7 @@
 	});
 </script>
 
--->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript">
 	var ww = document.body.clientWidth;
 	$(document).ready(function() {
@@ -235,7 +235,12 @@
 <script src="js/jquery.bxslider.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-	$('.bxslider').bxSlider();
+	$('.bxslider').bxSlider({
+	adaptiveHeight: true,
+	controls: true,
+	auto: true,
+	captions: true
+	});
 	});
 </script>
 

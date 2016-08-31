@@ -25,6 +25,7 @@
 	width: 100%;
 	max-height: 280px;
 	display: block;
+	margin-top: -16px;
 }
 
 .bx-viewport {
@@ -194,17 +195,18 @@
 
 .bx-wrapper .bx-caption {
 	position: absolute;
-	bottom: 0;
+	bottom: 9px;
 	left: 0;
 	background: #666\9;
-	background: rgba(80, 80, 80, 0.75);
+	background: rgba(0,0,0,0.4);
 	width: 100%;
 }
 
 .bx-wrapper .bx-caption span {
 	color: #fff;
-	font-family: Arial;
+	font-family: Helvetica;
 	display: block;
-	font-size: .85em;
+	font-size: .80em;
+	text-align: center;
 	padding: 10px;
 }

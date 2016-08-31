@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Aulavara | Diff</title>
+	<meta name="author" content="Austin Lazarus" />
+	<meta name="description" content="Portfolio site for Aulavara / Austin Lazarus" />
+	<meta name="keywords"  content="Austin Lazarus,Aulavara,Portfolio" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" href="css/codemirror.css">
+	<link rel="stylesheet" href="css/modal.css" />	
+</head>
+
+
+<body>
+	<div class="header">
+		<a href="#edit" class="edit"><img src="css/images/edit.png" /></a>
+<!-- 		<img src="css/images/info.png" />	 -->
+		<h1 align="CENTER">Programming Syntax difference</h1>
+		<h4 align="CENTER">// The quinnesential reference guide in programming language syntax differences //</h4>
+		<h4 align="center">// Currently only references in Javascript, Python, Php and Java //</h4>
+	</div>
+
+	<!-- *************************
+	=> EDIT MODAL
+	************************** -->
+	<div class="modal" id="edit_modal" style="display: none;">
+
+		<form action="" method="POST">
+			<input type="text" placeholder="Code block Topic" /><br />
+			<label>Javascript</label><br />
+			<textarea type="text" placeholder="/* Javascript /*" /></textarea><br />
+			<label>Python</label><br />
+			<textarea type="text" placeholder="''' Python '''" /></textarea><br /> 	
+			<label>Php</label><br />
+			<textarea type="text" placeholder="/* Php /*" /></textarea><br /> 	
+			<label>Java</label><br />
+			<textarea type="text" placeholder="/* Java /*" /></textarea><br />
+			<button type="submit">Submit</button> 			 
+		</form>			
+	</div>		
+
+	<div class="wrapper">
+	<div class="code_post">
+		
+		<h5 align="center">// Arrays //</h5>
+		<div id="javascript_code"><p>Javascript</p></div>
+		<hr style="border-top: none; border-bottom: 1px solid #DFDFDF;">		
+		<div id="python_code"><p>Python</p></div>		
+		<hr style="border-top: none; border-bottom: 1px solid #DFDFDF;">
+		<div id="php_code"><p>Php</p></div>
+		<hr style="border-top: none; border-bottom: 1px solid #DFDFDF;">
+		<div id="java_code"><p>Java</p></div>				
+
+	</div>
+	<br />
+	<div class="code_post">
+		
+		<h5 align="center">// Functions //</h5>
+		<div id="javascript_code"><p>Javascript</p></div>
+		<hr style="border-top: none; border-bottom: 1px solid #DFDFDF;">		
+		<div id="python_code"><p>Python</p></div>		
+		<hr style="border-top: none; border-bottom: 1px solid #DFDFDF;">
+		<div id="php_code"><p>Php</p></div>
+		<hr style="border-top: none; border-bottom: 1px solid #DFDFDF;">
+		<div id="java_code"><p>Java</p></div>				
+
+	</div>		
+	</div>	
+
+<script src="js/codemirror.js"></script>
+<script src="mode/javascript/javascript.js"></script>	
+<script type="text/javascript">
+	var myCodeMirror = CodeMirror(document.getElementById("javascript_code"),{
+	value: "var cars = ['Saab', 'Volvo', 'BMW'];\n console.log(cars[0]); // Saab\n console.log(cars[1]); // Volvo\n console.log(cars[2]); // BMW",
+	mode:  "javascript",
+    lineNumbers: true	
+	});
+</script>
+
+<script src="js/codemirror.js"></script>
+<script src="mode/python/python.js"></script>	
+<script type="text/javascript">
+	var myCodeMirror = CodeMirror(document.getElementById("python_code"),{	
+	value: "cars = ['Saab', 'Volvo', 'BMW']\n print(cars[0]) # Saab\n print(cars[1]) # Volvo\n print(cars[2]) # BMW",
+	mode:  "python",
+    lineNumbers: true			
+	});
+</script>
+
+<script src="js/codemirror.js"></script>
+<script src="mode/php/php.js"></script>	
+<script type="text/javascript">
+	var myCodeMirror = CodeMirror(document.getElementById("php_code"),{	
+	value: "$cars = array('Saab', 'Volvo', 'BMW');\n echo '$cars[0]'; // Saab\n echo '$cars[1]'; // Volvo\n echo '$cars[2]'; // BMW",
+	mode:  "php",
+    lineNumbers: true			
+	});
+</script>
+
+<script src="js/codemirror.js"></script>
+<script src="mode/java/java.js"></script>	
+<script type="text/javascript">
+	var myCodeMirror = CodeMirror(document.getElementById("java_code"),{	
+	value: "String[] cars = {'Saab', 'Volvo', 'BMW'};\n System.out.println(cars[0]); // Saab\n System.out.println(cars[1]); // Volvo\n System.out.println(cars[2]); // BMW",
+	mode:  "java",
+    lineNumbers: true			
+	});
+</script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/modal.js"></script>
+<script type="text/javascript">
+	jQuery(function($){
+	//**************************************	
+	// bind event handlers to modal triggers
+	$('body').on('click', '.edit', function(e){
+	e.preventDefault();
+	$('#edit_modal').modal().open();
+	});
+	});
+</script>
+
+</body>
+</html>

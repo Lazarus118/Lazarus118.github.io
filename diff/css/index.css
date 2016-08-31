@@ -1,0 +1,132 @@
+/*@font-face {
+    font-family:'Cartoon_Script';
+    src: url('fonts/Cartoon Script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+@import 'https://fonts.googleapis.com/css?family=Josefin+Slab:300';
+
+body {
+	padding: 0;
+	margin: 0;  
+}
+
+/*** HEADER ***/
+/**************/
+.header {
+	display:block;
+	width: 100%;
+/*	border-bottom: 3px solid #ff5858;*/
+	border-top: 3px solid #ff5858;	
+	position: fixed;
+	background: #336E7B;
+	top:0;
+	z-index: 900;
+}
+.header img {
+	display: block;
+	padding: 5px;
+	position: relative;
+}
+.header h1 {
+	color: #FDE3A7; 
+/*	font-family: Cartoon_Script;*/
+	font-family: 'Josefin Slab', serif;	
+}
+.header h4 {
+	color: #00aa88; 
+/*	font-family: Cartoon_Script;*/
+    font-family: 'Josefin Slab', serif;	
+}
+
+/*** EDIT ***/
+/************/
+#edit_modal {
+    display: block;
+    background: #336E7B;
+    margin: 0 auto;
+    margin-top: 5%;
+	border-top: 5px solid #ff5858;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;	
+    position: relative;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color: #336E7B;
+	text-align: center;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: #336E7B;
+	text-align: center;	
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #336E7B;
+	text-align: center;	
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: #336E7B;
+	text-align: center;	
+}
+
+#edit_modal input[type=text] {
+	width: 50%;
+	background: #FDE3A7;
+	border: none;  		
+}
+#edit_modal textarea[type=text] {
+	width: 100%;
+	background: #FDE3A7; 
+	border: none;  					
+}
+#edit_modal label {
+    font-family: 'Josefin Slab', serif;
+    font-weight: 700;	
+}
+#edit_modal button {
+	width: 101%;
+	border: none;
+	height: 30px;
+	color: #336E7B;
+	background: #ff5858;
+}
+
+/*** WRAPPER ***/
+/***************/
+.wrapper {
+	display: block;
+	position: relative;
+	top:140px;
+	width: 80%;
+	padding:10px;
+	margin: auto;
+}
+
+/*** CODE POST ***/
+/*****************/
+.code_post h5 {
+    color: #FDE3A7;
+/*    font-family: Cartoon_Script;*/
+    font-family: 'Josefin Slab', serif;
+    background: #336E7B;
+    top: -33px;
+    font-size: 20px;
+    position: relative;	
+}
+.code_post p {
+	font-family: Helvetica;
+    margin-left: 12px;
+    font-size: 12px;
+}
+.code_post {
+	display: block;
+	border:1px solid #DFDFDF;
+	position: relative;
+	top:50px;
+	border-radius:2px;
+	margin: auto;	
+}
+
