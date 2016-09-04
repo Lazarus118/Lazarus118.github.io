@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
 	<title>Aulavara | Diff</title>
@@ -30,24 +29,23 @@
 	************************** -->
 	<div class="modal" id="edit_modal" style="display: none;">
 
-		<form action="" method="POST">
-			<input type="text" placeholder="Code block Topic" /><br />
+		<form action="https://diff-server.herokuapp.com/api/diff" method="POST">
+			<input type="text" placeholder="Code block Topic" name="topic"/><br />
 			<label>Javascript</label><br />
-			<textarea type="text" placeholder="/* Javascript /*" /></textarea><br />
+			<textarea type="text" placeholder="/* Javascript /*" name="javascript"/></textarea><br />
 			<label>Python</label><br />
-			<textarea type="text" placeholder="''' Python '''" /></textarea><br /> 	
+			<textarea type="text" placeholder="''' Python '''" name="python"/></textarea><br /> 	
 			<label>Php</label><br />
-			<textarea type="text" placeholder="/* Php /*" /></textarea><br /> 	
+			<textarea type="text" placeholder="/* Php /*" name="php"/></textarea><br /> 	
 			<label>Java</label><br />
-			<textarea type="text" placeholder="/* Java /*" /></textarea><br />
+			<textarea type="text" placeholder="/* Java /*" name="java"/></textarea><br />
 			<button type="submit">Submit</button> 			 
 		</form>			
 	</div>		
 
 	<div class="wrapper">
 	<div class="code_post">
-		
-		<h5 align="center">// Arrays //</h5>
+		<h5 align="center"></h5>
 		<div id="javascript_code"><p>Javascript</p></div>
 		<hr style="border-top: none; border-bottom: 1px solid #DFDFDF;">		
 		<div id="python_code"><p>Python</p></div>		
@@ -56,63 +54,57 @@
 		<hr style="border-top: none; border-bottom: 1px solid #DFDFDF;">
 		<div id="java_code"><p>Java</p></div>				
 
-	</div>
-	<br />
-	<div class="code_post">
-		
-		<h5 align="center">// Functions //</h5>
-		<div id="javascript_code"><p>Javascript</p></div>
-		<hr style="border-top: none; border-bottom: 1px solid #DFDFDF;">		
-		<div id="python_code"><p>Python</p></div>		
-		<hr style="border-top: none; border-bottom: 1px solid #DFDFDF;">
-		<div id="php_code"><p>Php</p></div>
-		<hr style="border-top: none; border-bottom: 1px solid #DFDFDF;">
-		<div id="java_code"><p>Java</p></div>				
-
-	</div>		
+	</div><br />		
 	</div>	
 
+
+<script src="https://code.jquery.com/jquery-2.0.2.min.js"></script>
 <script src="js/codemirror.js"></script>
-<script src="mode/javascript/javascript.js"></script>	
+<script src="mode/javascript/javascript.js"></script>
+<script src="mode/python/python.js"></script>
+<script src="mode/php/php.js"></script>		
 <script type="text/javascript">
-	var myCodeMirror = CodeMirror(document.getElementById("javascript_code"),{
-	value: "var cars = ['Saab', 'Volvo', 'BMW'];\n console.log(cars[0]); // Saab\n console.log(cars[1]); // Volvo\n console.log(cars[2]); // BMW",
+// ----------------------------------- // ajax results pull
+$.ajax({ 
+type: 'GET', 
+url: 'https://diff-server.herokuapp.com/api/diff', 
+dataType: 'json',
+cache: true,
+success: function (obj) {
+
+$.each(obj, function (index, element) {
+
+	var myCodeMirror1 = CodeMirror(document.getElementById("javascript_code"),{
+	value: ''+ element.javascript +'',
 	mode:  "javascript",
     lineNumbers: true	
 	});
-</script>
-
-<script src="js/codemirror.js"></script>
-<script src="mode/python/python.js"></script>	
-<script type="text/javascript">
-	var myCodeMirror = CodeMirror(document.getElementById("python_code"),{	
-	value: "cars = ['Saab', 'Volvo', 'BMW']\n print(cars[0]) # Saab\n print(cars[1]) # Volvo\n print(cars[2]) # BMW",
+	var myCodeMirror2 = CodeMirror(document.getElementById("python_code"),{	
+	value: ''+ element.python +'',
 	mode:  "python",
     lineNumbers: true			
 	});
-</script>
-
-<script src="js/codemirror.js"></script>
-<script src="mode/php/php.js"></script>	
-<script type="text/javascript">
-	var myCodeMirror = CodeMirror(document.getElementById("php_code"),{	
-	value: "$cars = array('Saab', 'Volvo', 'BMW');\n echo '$cars[0]'; // Saab\n echo '$cars[1]'; // Volvo\n echo '$cars[2]'; // BMW",
+	var myCodeMirror3 = CodeMirror(document.getElementById("php_code"),{	
+	value: ''+ element.php +'',
 	mode:  "php",
     lineNumbers: true			
 	});
-</script>
-
-<script src="js/codemirror.js"></script>
-<script src="mode/java/java.js"></script>	
-<script type="text/javascript">
-	var myCodeMirror = CodeMirror(document.getElementById("java_code"),{	
-	value: "String[] cars = {'Saab', 'Volvo', 'BMW'};\n System.out.println(cars[0]); // Saab\n System.out.println(cars[1]); // Volvo\n System.out.println(cars[2]); // BMW",
-	mode:  "java",
+	var myCodeMirror4 = CodeMirror(document.getElementById("java_code"),{	
+	value: ''+ element.java +'',
+	mode:  "javascript",
     lineNumbers: true			
 	});
-</script>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	$(".wrapper").prepend('<div class="code_post"><h5 align="center">'+ element.topic +'</h5><div id="javascript_code"><p>Javascript</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="python_code"><p>Python</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="php_code"><p>Php</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="java_code"><p>Java</p></div></div><br />');	
+
+});
+} // ---------------- end of Sucess 
+}); // --------------------- end of Ajax
+</script>	
+
+
+<script src="https://code.jquery.com/jquery-2.0.2.min.js"></script>
 <script src="js/modal.js"></script>
 <script type="text/javascript">
 	jQuery(function($){
