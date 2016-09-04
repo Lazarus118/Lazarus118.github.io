@@ -4,8 +4,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
 	<title>Aulavara | Diff</title>
 	<meta name="author" content="Austin Lazarus" />
-	<meta name="description" content="Portfolio site for Aulavara / Austin Lazarus" />
-	<meta name="keywords"  content="Austin Lazarus,Aulavara,Portfolio" />
+	<meta name="description" content="Programming code difference in syntax #Javascript #Php #Phython #Java" />
+	<meta name="keywords"  content="Code, Programming, Difference, Syntax" />
 	<meta name="Resource-type" content="Document" />
 
 	<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
@@ -77,7 +77,7 @@ success: function (obj) {
 $.each(JSON.parse(obj), function (index, element) {
 
 	$(".wrapper").prepend('<div class="code_post"><h5 align="center">'+ element.topic +'</h5><div id="javascript_code"><p>Javascript</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="python_code"><p>Python</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="php_code"><p>Php</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="java_code"><p>Java</p></div></div><br />');	
-	
+
 	var myCodeMirror1 = CodeMirror(document.getElementById("javascript_code"),{
 	value: ''+ element.javascript +'',
 	mode:  "javascript",
