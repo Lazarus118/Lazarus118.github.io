@@ -57,7 +57,7 @@
 	</div><br />		
 	</div>	
 
-
+<script src="js/jquery.ajax-cross-origin.min.js"></script>
 <script src="https://code.jquery.com/jquery-2.0.2.min.js"></script>
 <script src="js/codemirror.js"></script>
 <script src="mode/javascript/javascript.js"></script>
@@ -65,7 +65,8 @@
 <script src="mode/php/php.js"></script>		
 <script type="text/javascript">
 // ----------------------------------- // ajax results pull
-$.ajax({ 
+$.ajax({
+crossOrigin: true, 
 type: 'GET', 
 url: 'https://diff-server.herokuapp.com/api/diff', 
 dataType: 'json',
