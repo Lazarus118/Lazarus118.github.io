@@ -44,7 +44,7 @@
 	</div>		
 
 	<div class="wrapper">
-	<div class="code_post">
+<!-- 	<div class="code_post">
 		<h5 align="center"></h5>
 		<div id="javascript_code"><p>Javascript</p></div>
 		<hr style="border-top: none; border-bottom: 1px solid #DFDFDF;">		
@@ -54,7 +54,7 @@
 		<hr style="border-top: none; border-bottom: 1px solid #DFDFDF;">
 		<div id="java_code"><p>Java</p></div>				
 
-	</div><br />		
+	</div><br /> -->		
 	</div>	
 
 
@@ -74,8 +74,10 @@ dataType: 'json',
 cache: true,
 success: function (obj) {
 
-$.each(obj, function (index, element) {
+$.each(JSON.parse(obj), function (index, element) {
 
+	$(".wrapper").prepend('<div class="code_post"><h5 align="center">'+ element.topic +'</h5><div id="javascript_code"><p>Javascript</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="python_code"><p>Python</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="php_code"><p>Php</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="java_code"><p>Java</p></div></div><br />');	
+	
 	var myCodeMirror1 = CodeMirror(document.getElementById("javascript_code"),{
 	value: ''+ element.javascript +'',
 	mode:  "javascript",
@@ -96,9 +98,6 @@ $.each(obj, function (index, element) {
 	mode:  "javascript",
     lineNumbers: true			
 	});
-
-
-	$(".wrapper").prepend('<div class="code_post"><h5 align="center">'+ element.topic +'</h5><div id="javascript_code"><p>Javascript</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="python_code"><p>Python</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="php_code"><p>Php</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="java_code"><p>Java</p></div></div><br />');	
 
 });
 } // ---------------- end of Sucess 
