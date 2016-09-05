@@ -29,7 +29,13 @@
 	************************** -->
 	<div class="modal" id="edit_modal" style="display: none;">
 
+		<h3 align="CENTER">Instructions</h3>
+		<p align="LEFT">Include a <b>Programming syntax difference Topic</b> in the "Code block Topic" field. e.g. // Arrays //</p>
+		<p align="LEFT">Then follow with your Code differences in the appropriate fields. For proper formating and readability use spaces and line breaks ( <b>\r\n</b> ) in the diff textarea below.</p>
+		<p align="LEFT">Important! Please use single ( <b>''</b> ) instead of ( <b>""</b> ) in your code strings</p>
+
 		<form action="https://diff-server.herokuapp.com/api/diff" method="POST">
+			<label>Topic</label><br />
 			<input type="text" placeholder="Code block Topic" name="topic"/><br />
 			<label>Javascript</label><br />
 			<textarea type="text" placeholder="/* Javascript /*" name="javascript"/></textarea><br />
