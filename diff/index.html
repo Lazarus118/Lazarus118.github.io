@@ -36,15 +36,15 @@
 
 		<form action="https://diff-server.herokuapp.com/api/diff" method="POST">
 			<label>Topic</label><br />
-			<input type="text" placeholder="Code block Topic" name="topic"/><br />
+			<input type="text" placeholder="Code block Topic" name="topic" required/><br />
 			<label>Javascript</label><br />
-			<textarea type="text" placeholder="/* Javascript /*" name="javascript"/></textarea><br />
+			<textarea type="text" placeholder="/* Javascript /*" name="javascript" required/></textarea><br />
 			<label>Python</label><br />
-			<textarea type="text" placeholder="''' Python '''" name="python"/></textarea><br /> 	
+			<textarea type="text" placeholder="''' Python '''" name="python" required/></textarea><br /> 	
 			<label>Php</label><br />
-			<textarea type="text" placeholder="/* Php /*" name="php"/></textarea><br /> 	
+			<textarea type="text" placeholder="/* Php /*" name="php" required/></textarea><br /> 	
 			<label>Java</label><br />
-			<textarea type="text" placeholder="/* Java /*" name="java"/></textarea><br />
+			<textarea type="text" placeholder="/* Java /*" name="java" required/></textarea><br />
 			<button type="submit">Submit</button> 			 
 		</form>			
 	</div>		
@@ -76,7 +76,7 @@ $.ajax({
 crossOrigin: true, 
 type: 'GET', 
 url: 'https://diff-server.herokuapp.com/api/diff', 
-dataType: 'json',
+dataType: 'jsonp',
 cache: true,
 success: function (obj) {
 
@@ -106,7 +106,10 @@ $.each(JSON.parse(obj), function (index, element) {
 	});
 
 });
-} // ---------------- end of Sucess 
+}, // ---------------- end of Sucess
+error: function() {
+	$('.wrapper').html('<div style="text-align:center; position:relative;"><img src="css/images/loading.gif" /><p>if (loading == 5mins) { return later; } else { continue;}</p></div>');
+} // ------------------ end of Error
 }); // --------------------- end of Ajax
 </script>	
 
