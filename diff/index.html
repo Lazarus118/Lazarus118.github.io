@@ -32,7 +32,7 @@
 		<h3 align="CENTER">Instructions</h3>
 		<p align="LEFT">Include a <b>Programming syntax difference Topic</b> in the "Code block Topic" field. e.g. // Arrays //</p>
 		<p align="LEFT">Then follow with your Code differences in the appropriate fields. For proper formating and readability use spaces and line breaks ( <b>\r\n</b> ) in the diff textarea below.</p>
-		<p align="LEFT">Important! Please use single ( <b>''</b> ) instead of ( <b>""</b> ) in your code strings</p>
+		<p align="LEFT">Important! Please use single quotes ( <b>' '</b> ) instead of double-quotes ( <b>" "</b> ) in your code strings.</p>
 
 		<form action="https://diff-server.herokuapp.com/api/diff" method="POST">
 			<label>Topic</label><br />
@@ -47,20 +47,22 @@
 			<textarea type="text" placeholder="/* Java /*" name="java" required/></textarea><br />
 			<button type="submit">Submit</button> 			 
 		</form>			
-	</div>		
+	</div>
 
-	<div class="wrapper">
-<!-- 	<div class="code_post">
-		<h5 align="center"></h5>
-		<div id="javascript_code"><p>Javascript</p></div>
-		<hr style="border-top: none; border-bottom: 1px solid #DFDFDF;">		
-		<div id="python_code"><p>Python</p></div>		
-		<hr style="border-top: none; border-bottom: 1px solid #DFDFDF;">
-		<div id="php_code"><p>Php</p></div>
-		<hr style="border-top: none; border-bottom: 1px solid #DFDFDF;">
-		<div id="java_code"><p>Java</p></div>				
+	<!-- *************************
+	=> UPDATE MODAL
+	************************** -->
+	<div class="modal" id="update_modal" style="display: none;">	
+	</div>
 
-	</div><br /> -->		
+	<!-- *************************
+	=> DELETE MODAL
+	************************** -->
+	<div class="modal" id="delete_modal" style="display: none;">	
+	</div>	
+
+
+	<div class="wrapper">		
 	</div>	
 
 
@@ -82,8 +84,21 @@ success: function (obj) {
 
 $.each(JSON.parse(obj), function (index, element) {
 
-	$(".wrapper").prepend('<div class="code_post"><h5 align="center">'+ element.topic +'</h5><div id="javascript_code"><p>Javascript</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="python_code"><p>Python</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="php_code"><p>Php</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="java_code"><p>Java</p></div></div><br />');	
+	$(".wrapper").prepend('<div class="code_post"><h5 align="center">'+ element.topic +'<a href="#" style="float:right;" class="edit_btn"><img src="css/images/update.png" /></a><a href="#" style="float:right;" class="delete_btn"><img src="css/images/delete.png" /></a></h5><div id="javascript_code"><p>Javascript</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="python_code"><p>Python</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="php_code"><p>Php</p></div><hr style="border-top: none; border-bottom: 1px solid #DFDFDF;"><div id="java_code"><p>Java</p></div></div><br />');
 
+	//********************************
+	// => DELETE BUTTON
+	$('.delete_btn').click(function() {
+
+		$('#delete_modal').html('<h3 align="CENTER">Delete</h3><p align="CENTER">'+ element.topic +'</p><form action="localhost:8080/api/diff/'+ element._id +'" method="DELETE"><button type="submit">Delete</button> </form>');
+	});
+	//********************************
+	// => UPDATE BUTTON
+	$('.edit_btn').click(function() {
+
+		$('#update_modal').html('<h3 align="CENTER">Update</h3><form action="localhost:8080/api/diff/'+ element._id +'" method="PUT"><label>Topic</label><br /><input type="text" placeholder="'+ element.topic +'" name="topic" required/><br /><label>Javascript</label><br /><textarea type="text" placeholder="/* Javascript /*" name="javascript" required/></textarea><br /><label>Python</label><br /><textarea type="text" placeholder="#python" name="python" required/></textarea><br /> <label>Php</label><br /><textarea type="text" placeholder="/* Php /*" name="php" required/></textarea><br /> <label>Java</label><br /><textarea type="text" placeholder="/* Java /*" name="java" required/></textarea><br /><button type="submit">Update</button> </form>');
+	});			
+	//********************************
 	var myCodeMirror1 = CodeMirror(document.getElementById("javascript_code"),{
 	value: ''+ element.javascript +'',
 	mode:  "javascript",
@@ -110,6 +125,7 @@ $.each(JSON.parse(obj), function (index, element) {
 error: function() {
 	$('.wrapper').html('<div style="text-align:center; position:relative;"><img src="css/images/loading.gif" /><p>if (loading == 5mins) { return later; } else { continue;}</p></div>');
 } // ------------------ end of Error
+
 }); // --------------------- end of Ajax
 </script>	
 
@@ -124,7 +140,17 @@ error: function() {
 	e.preventDefault();
 	$('#edit_modal').modal().open();
 	});
-	});
+
+	$('body').on('click', '.edit_btn', function(e){
+	e.preventDefault();
+	$('#update_modal').modal().open();
+	});	
+
+	$('body').on('click', '.delete_btn', function(e){
+	e.preventDefault();
+	$('#delete_modal').modal().open();
+	});	
+	});	
 </script>
 
 </body>

@@ -95,6 +95,83 @@ body {
 	background: #ff5858;
 }
 
+/*** UPDATE ***/
+/*************/
+#update_modal {
+    display: block;
+    background: #336E7B;
+    margin: 0 auto;
+    margin-top: 5%;
+	border-top: 5px solid #ff5858;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;	
+    position: relative;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color: #336E7B;
+	text-align: center;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: #336E7B;
+	text-align: center;	
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #336E7B;
+	text-align: center;	
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: #336E7B;
+	text-align: center;	
+}
+
+#update_modal input[type=text] {
+	width: 50%;
+	background: #FDE3A7;
+	border: none;  		
+}
+#update_modal textarea[type=text] {
+	width: 100%;
+	background: #FDE3A7; 
+	border: none;  					
+}
+#update_modal label {
+    font-family: 'Josefin Slab', serif;
+    font-weight: 700;	
+}
+#update_modal button {
+	width: 101%;
+	border: none;
+	height: 30px;
+	color: #336E7B;
+	background: #ff5858;
+}
+
+/*** DELETE ***/
+/*************/
+#delete_modal {
+    display: block;
+    background: #336E7B;
+    margin: 0 auto;
+    margin-top: 5%;
+	border-top: 5px solid #ff5858;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;	
+    position: relative;
+}
+#delete_modal p {
+	color: #FDE3A7; 	
+}
+#delete_modal button {
+	width: 101%;
+	border: none;
+	height: 30px;
+	color: #336E7B;
+	background: #ff5858;
+}
+
 /*** WRAPPER ***/
 /***************/
 .wrapper {
@@ -110,12 +187,18 @@ body {
 /*****************/
 .code_post h5 {
     color: #FDE3A7;
-/*    font-family: Cartoon_Script;*/
     font-family: 'Josefin Slab', serif;
+	border-top: 5px solid #ff5858;    
     background: #336E7B;
     top: -33px;
     font-size: 20px;
     position: relative;	
+}
+.code_post img {
+	display: block;
+	padding: 4px;
+	position: relative;	
+	background: #ff5858;	
 }
 .code_post p {
 	font-family: Helvetica;
