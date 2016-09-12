@@ -6,6 +6,54 @@ body {
     margin: 0;
 }
 
+.wrapper h3 {
+    margin: 0 auto;
+    top:100px;
+    position: relative;
+}
+.wrapper p {
+    top:110px !important;
+    padding-left: 250px;
+    padding-right: 250px;
+    position: relative;
+}
+.table_wrapper {
+    top: 200px !important;
+    margin: 0 auto;
+    position: relative;
+}
+.wrapper table, td, th { 
+    width: 50%; 
+    color: #BDC3C7;
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #BDC3C7;    
+}
+.wrapper table {
+    border-collapse: collapse;
+}
+.wrapper th {
+    height: 50px;
+}
+.wrapper ul {
+    top:90px !important;
+    margin: 0;
+    padding: 0;
+    float: right;
+    right:5px;       
+    position: relative;
+}
+.wrapper li {
+    float: left;
+    list-style-image: url('../images/not_next.png');    
+    margin-left: 40px;               
+}
+.wrapper li:last-child {
+    list-style-image: url('../images/next.png');
+}
+.wrapper li > a {
+    text-decoration: none;
+}
 .container_menu {
     width: 100%;
     top: 0;
@@ -22,7 +70,7 @@ body {
     height: 50px;
     margin: 0;
     background: #3A539B;
-    border-top: 20px solid #ECF0F1;
+    border-top: 20px solid #BDC3C7;
     box-shadow: 0px 1px 0px #ECF0F1;
 }
 .nav_nursing p {
@@ -30,6 +78,7 @@ body {
     margin-right: 20px;
     font-size: 11px;
     padding: 2px;
+    color:#F64747;
     font-weight: 700;
 }
 .nav_nursing:before,
@@ -198,13 +247,17 @@ body {
     display: block;
     width: 100%;
     height: 50px;
-    background: rgba(218, 223, 225, 0.4);
+/*    background: rgba(218, 223, 225, 0.4); */
+    background: #3A539B;    
     z-index: 800;
 }
 
 .section1_nav h3 {
-    color:#000;
+    color:#fff;
     z-index: 1;
+    font-family: 'Roboto', sans-serif;    
+    font-size: 15px;
+    padding: 10px;
 }
 
 .sub_menu_1 {
@@ -263,12 +316,77 @@ body {
 }
 
 /********************
+ Login_form
+********************/
+.login_form form {
+    display: block;
+    bottom:-100px;
+    padding: 10px;
+    width: 30%;                              
+    margin: 0 auto;
+    background: #ECF0F1;    
+    position: relative;
+}
+.login_form input, button {
+    display: inline-block;
+    position: absolute;
+}
+.login_form input {
+    border: none;
+}
+.login_form button {
+    border:none;
+    background: #F64747;
+    color:#fff;
+    width: 45%;
+}
+.login_form p {
+    font-size: 10px;
+}
+.login_form a {
+    color: blue;
+}
+
+/********************
+ Register_form
+********************/
+.register_form form {
+    display: block;
+    bottom: 100px;
+    padding: 10px;
+    width: 30%;                              
+    margin: 0 auto;
+    background: #ECF0F1;    
+    position: relative;
+}
+.register_form input, button {
+    display: inline-block;
+    position: absolute;
+}
+.register_form input {
+    border: none;
+}
+.register_form button {
+    border:none;
+    background: #F64747;
+    color:#fff;
+    width: 45%;
+}
+.register_form p {
+    font-size: 10px;
+}
+.register_form a {
+    color: blue;
+}
+
+/********************
  FOOTER
 ********************/
 .footer {
     display: block;
     width: 100%;
     height: 60px;
+    color: #95A5A6;
     background: #ECF0F1;
     bottom: 0%;
     position:fixed;
